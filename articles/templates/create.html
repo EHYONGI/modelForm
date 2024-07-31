@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>create</h1>
+<form action="" method="post"> <!-- input만 만들어주기에 form 태그는 내가 설정 ! -->
+    {% csrf_token %} <!-- post와 세트(문서 직인) -->
+    {{form}} <!-- 자동생성된 것 안에 개발자 도구로 보면 required -> 이건 입력 안했을 때 제출 안 되는 것(최소한의 방법 - 프론트엔드에서만 검증) -->
+    <input type="submit">
+</form>
+{% endblock %}

@@ -33,20 +33,20 @@ def create(request):
             # article.save()
             # 와 동일, 그러나 is_valid()로 검증 코드 추가 !
 
-        else:
+        # else: => 중복 없앤 최종 코드 ! (아래 겹치는 코드 shift + Tab으로 빼기)
             # form = ArticleForm(request.POST)
-            context = {
-                'form': form,
-            }
+            # context = {
+            #     'form': form,
+            # }
 
-            return render(request, 'create.html', context)
+            # return render(request, 'create.html', context)
 
     else:
         form = ArticleForm()
 
-        context = {
-            'form': form,
-        }
+    context = {
+        'form': form,
+    }
 
-        return render(request, 'create.html', context)
+    return render(request, 'create.html', context)
         

@@ -6,6 +6,8 @@
         <h5>{{article.title}}</h5>
         <p>{{article.content}}</p>
         <p>{{article.created_at}}</p>
+        <a href="{% url 'articles:delete' id=article.id %}">delete</a>
+        <a href="{% url 'articles:update' id=article.id %}">update</a>
         <hr>
     {% endfor %}
 
